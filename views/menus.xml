@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Top menu item -->
+        <menuitem id="menu_college_root" name="College" web_icon="college_module,static/description/icon.png"/>
+
+        <!-- Student menu items -->
+        <menuitem id="menu_student_root" name="Students" parent="menu_college_root" sequence="10"/>
+        <menuitem id="menu_student_list" name="Student List" parent="menu_student_root" action="action_student" sequence="10"/>
+
+        <!-- Faculty menu items -->
+        <menuitem id="menu_faculty_root" name="Faculty" parent="menu_college_root" sequence="20"/>
+        <!-- Add faculty menu items here -->
+
+        <!-- Department menu items -->
+        <menuitem id="menu_department_root" name="Departments" parent="menu_college_root" sequence="30"/>
+        <!-- Add department menu items here -->
+
+        <!-- Course menu items -->
+        <menuitem id="menu_course_root" name="Courses" parent="menu_college_root" sequence="40"/>
+        <!-- Add course menu items here -->
+    </data>
+</odoo>

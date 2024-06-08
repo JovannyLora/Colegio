@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Faculty Tree View -->
+        <record id="view_faculty_tree" model="ir.ui.view">
+            <field name="name">college.faculty.tree</field>
+            <field name="model">college.faculty</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="department_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Faculty Form View -->
+        <record id="view_faculty_form" model="ir.ui.view">
+            <field name="name">college.faculty.form</field>
+            <field name="model">college.faculty</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="department_id"/>
+                            <field name="course_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Faculty Action -->
+        <record id="action_faculty" model="ir.actions.act_window">
+            <field name="name">Faculty</field>
+            <field name="res_model">college.faculty</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
